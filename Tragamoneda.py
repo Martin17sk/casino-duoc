@@ -30,7 +30,7 @@ while True:
 
         if opcion_prestamo == "si":
             saldo += 2000
-            deuda_prestamo = 2000
+            deuda_prestamo += 2000
             prestamo = True
             print(f"\nHas adquirido el préstamo, tu nuevo 💰 saldo es💲{saldo}")
 
@@ -101,7 +101,7 @@ while True:
     inferior3 = random.choice(iconos)
     inferior4 = random.choice(iconos)
 
-    print("")
+    print()
     print("        LAS VEGAS SLOTS")
     print("  🎰========================🎰")
     print(f"    || {superior1} | {superior2} | {superior3} | {superior4} ||")
@@ -112,7 +112,6 @@ while True:
     if resultado1 == resultado2 == resultado3 == resultado4:
         premio = saldo_de_apuesta * 5
         saldo += premio
-        tiradas += 1
         print()
         print(f"🎉 ¡JACKPOT! 🎉 Ganaste💲{premio}")
 
@@ -124,11 +123,10 @@ while True:
     ):
         premio = saldo_de_apuesta * 2
         saldo += premio
-        tiradas += 1
         print()
         print(f"✨ Ganaste💲{premio}")
 
     else:
-        tiradas += 1
         print()
         print("😢 Perdiste la apuesta")
+    tiradas += 1
